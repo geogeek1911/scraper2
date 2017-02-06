@@ -2,7 +2,7 @@
 
 Streamlined web crawler for rental listings
 
-![alt tag](https://raw.githubusercontent.com/mxndrwgrdnr/scraper2/master/rentsqft_by_week.png)
+
 ### What it does
 
 The `scraper2` directory defines a generalized Craigslist rental listing crawler, and scripts like `test_scraper.py` and `scrape_prior_day.py` instantiate it with particular lists of search domains, time parameters, and other settings. 
