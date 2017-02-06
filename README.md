@@ -1,6 +1,6 @@
 # Scraper2
 
-Streamlined web crawler for rental listings
+Streamlined web crawler for rental listings, based mostly on Sam Maurer's refactoring of Geoff Boeing's `ClistRentScraper`.
 
 ![alt tag](https://raw.githubusercontent.com/mxndrwgrdnr/scraper2/master/rentsqft_by_week.png)
 
