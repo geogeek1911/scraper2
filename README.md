@@ -2,6 +2,7 @@
 
 Streamlined web crawler for rental listings
 
+![alt tag](https://raw.githubusercontent.com/mxndrwgrdnr/scraper2/master/rentsqft_by_week.png)
 
 ### What it does
 
@@ -23,33 +24,20 @@ This project is on hold while we look into more official access to Craigslist da
 
 ### Task list (higher priority)
 
-- Figure out what Craigslist's throttle thresholds are, and put rate limits into our scripts. On 5/6 they blocked my IP after requesting about 10,000 URLs over a few hours.
-
-- Add a filter to avoid requesting URLs for listings that we know from the results page are missing necessary variables like price or number of bedrooms.
-
-- Add docstrings and other proper code templating.
-
-- Deploy on Linux server.
-
-- Add option to upload data to S3.
-
 - Add Slack status notification.
 
-- Write unit tests.
+- Bin the domains/regions into those that need more frequent updates and those that don't. We shouldn't need to scrape regions in Abilene, TX every hour.
 
-- Craigslist returns a maximum of 2500 search results per query, which in high-traffic regions is much less than a full day of listings. For example, it's approx 6 daytime hours in the "sfbay" region. Here are some options: (a) run the scraper once a day at midnight and accept that we are getting an incomplete sample (current approach), (b) run the scraper more frequently, (c) try switching to sub-region searches.
+- Write unit tests.
 
 
 ### Task list (lower priority)
 
-- Improve log messages.
+- Allow for duplicate listings if price has changed (i.e. make a new unique key in psql db)
 
-- Improve and test the fail conditions to make sure we won't get into recursive loops, and exit quickly when Craigslist throttles our requests.
+- Improve log messages.
 
 - Is the list of data fields we're collecting optimal? 
 
 - Check the master list of Craigslist domains that we're crawling, which was compiled by Geoff in 2014. Is there a way to assemble the list programmatically, to make sure it's always up to date?
 
-- Should we put the rental listings directly into a database as well as flat files?
-
-- Develop a separate set of scripts for data cleaning, for example to remove duplicate listings.
