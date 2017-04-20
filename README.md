@@ -2,6 +2,8 @@
 
 Streamlined web crawler for rental listings, based mostly on Sam Maurer's refactoring of Geoff Boeing's `ClistRentScraper`.
 
+![image](https://github.com/mxndrwgrdnr/scraper2/blob/master/example.png)
+
 ### What it does
 
 The `scraper2` directory defines a generalized Craigslist rental listing crawler, and scripts like `test_scraper.py` and `scrape_prior_day.py` instantiate it with particular lists of search domains, time parameters, and other settings. 
